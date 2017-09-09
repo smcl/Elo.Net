@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Elo</PackageId>
+    <PackageVersion>0.2.0</PackageVersion>
+    <Authors>Sean McLemon</Authors>
+    <Description>A simple Elo rating system written in F#</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Initial release - probably not working</PackageReleaseNotes>
+    <Copyright>Copyright 2017 (c) Sean McLemon. All rights reserved.</Copyright>
+    <PackageTags>Elo</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+</Project>
