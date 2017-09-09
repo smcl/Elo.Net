@@ -12,7 +12,9 @@ Install from [NuGet](https://www.nuget.org/packages/Elo/) via Visual Studio's pa
 
     $ dotnet add package Elo
 
-... and import the `Elo` namespace, initialise an `EloSystem` where each team starts with having 1000 points, with [K=32](https://en.wikipedia.org/wiki/Elo_rating_system#Most_accurate_K-factor) and add results to the system. Below is an example in F# of how we'd initialize a ranking system and populate it with the results from the first six games of the [2017 Confederations Cup](http://www.fifa.com/confederationscup/matches/index.html):
+## Example
+
+Below is an F# example showing how you can use the library. In short - import the `Elo` namespace, initialise an `EloSystem` (specifying the starting points, and the [K value](https://en.wikipedia.org/wiki/Elo_rating_system#Most_accurate_K-factor)) then add results to the system. The results are simply the first six games of the [2017 Confederations Cup](http://www.fifa.com/confederationscup/matches/index.html).
 
     open Elo;
 
@@ -39,6 +41,8 @@ This will output the below:
     Cameroon: 984
     Australia: 984
     New Zealand: 968
+
+## Results
 
 The result is defined from the perspective of the first team or player, and is simply a float in the range `[0.0, 1.0]` with 1.0 a win and 0.0 is a loss. There are currently two different scoring systems defined - `BasicResult` and `BestOfFive`
 
