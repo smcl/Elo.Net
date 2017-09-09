@@ -3,11 +3,6 @@ namespace Elo
 open System
 open System.Collections.Generic
 
-type BasicResult =
-    member this.Win = 1.0
-    member this.Draw = 0.5
-    member this.Loss = 0.0
-
 type Competitor(competitorId:string, rating:double) = 
     let mutable _rating = rating
     member this.CompetitorId = competitorId
