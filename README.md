@@ -20,14 +20,15 @@ Below is an F# example showing how you can use the library. In short - import th
 
     let rankings = EloSystem(EloSettings(32.0, 1000.0))
 
-    // Add one round of results which will all use the same "original" ratings - this might be a tournament.
-    let results1 = seq {
+    let round1 = seq {
         yield Result("Russia", "New Zealand", BasicResult.Win)   // Russia beat New Zealand
         yield Result("Portugal", "Mexico", BasicResult.Draw)     // Brazil and Afghanistan draw
         yield Result("Cameroon", "Chile", BasicResult.Loss)      // Cameron lose to Chile
         yield Result("Australia", "Germany", BasicResult.Loss)   // Australia lose to Germany
         yield Result("Russia", "Portugal", BasicResult.Loss)     // Russia lose to Portgual
         yield Result("Mexico", "New Zealand", BasicResult.Win) } // Mexico beat New Zealand
+
+    rankings.AddResults(round1)
 
     for team in rankings.Rankings do printfn "%A" team
 
